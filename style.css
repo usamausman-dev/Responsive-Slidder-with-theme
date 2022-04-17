@@ -1,0 +1,67 @@
+.carousel-item{
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-item .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.carousel-item h1{
+    opacity: 0;
+}
+
+.carousel-item p{
+    opacity: 0;
+
+}
+.carousel-item.active h1{
+    animation: fadeInLeft 0.5s ease forwards;
+}
+
+.carousel-item.active p{
+    animation: fadeInRight 0.5s ease forwards;
+}
+
+/* Animation For Text */
+
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Indicators Circle */
+
+.carousel-indicators [data-bs-target]{
+    height: 70px;
+    width: 70px;
+    background-position:center;
+    background-size: cover;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    border: 3px solid #ffff
+}
